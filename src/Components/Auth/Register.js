@@ -21,10 +21,14 @@ export default function Register() {
         })
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
+
     return (
         <div className='modal_form'>
             <h3 className=' mb-4 fw-bold'>Register</h3>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className='form-group mb-3'>
                     <input
                         className='form-control' 
