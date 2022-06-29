@@ -1,6 +1,76 @@
+/* Style form modal */
+
 .modal_form {
     width: 310px;
     background-color: #181818;
     padding: 30px 25px;
     border-radius: 5px;
+}
+
+/* Style for navbar */
+
+.header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    align-items: center;
+    background-color: #0b0b0b !important;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header_logo {
+    width: 75px;
+    object-fit: contain;
+    margin: 0 30px;
+}
+
+.header_search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.header_searchInput {
+    height: 30px;
+    padding: 10px;
+    border: none;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.header_searchIcon {
+    width: 35px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.header_nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header_option {
+    text-decoration: none;
+    color: white !important;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.price {
+    color: white;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.product_image {
+    width: 190px;
+    height: 240px;
 }
