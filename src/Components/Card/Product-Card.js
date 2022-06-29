@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../Styles.css'
+import convertRupiah from 'rupiah-format';
 
 export default function ProductCard ({ item, index }) {
     return (
@@ -11,11 +11,11 @@ export default function ProductCard ({ item, index }) {
                 key={index}
             >
                 <div>
-                    <img src={item.image} className='product_image'/>
+                    <img src={item.image} className='rounded' style={{width: '197px', height: '245px'}}/>
                     <div className='mx-2 my-2'>
                         <div style={{color: '#F74D4D'}} className='text-break fw-bold'>{item.name}</div>
                         <div className='price mt-2'>
-                            {item.price}
+                            {convertRupiah.convert(item.price)}
                         </div>
                         <div className='price'>Stock : {item.stock}</div>
                     </div>
