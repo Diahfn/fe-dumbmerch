@@ -16,3 +16,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.bg {
+  background: #0b0b0b !important;
+  min-height: 100vh;
+  color: white;
+}
+
+.merch_description {
+  font-family: 'Roboto';
+  margin-top: 28px;
+}
+
+.merch_description p {
+  width: 370px;
+  color: #6A6A6A;
+  font-size: 15px;
+}
+
+.button {
+  font-weight: 600;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  padding: 5px 35px;
+}
+
+.image_product {
+  width: 360px;
+  border-radius: 3px;
+}
+
+.red_font {
+  color: #F74D4D;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+img {
+  image-rendering: optimizeSpeed;
+}
+
+.text_profile {
+  color: #F74D4D;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.img-transaction {
+  width: 85px;
+  height: 100px;
+}
+
+.transaction-card {
+  width: 550px;
+  background-color: #303030;
+  padding: 12px;
+}

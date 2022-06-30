@@ -22,6 +22,10 @@
     z-index: 100;
 }
 
+.header > a, .header_nav > a {
+    cursor: pointer;
+}
+
 .header_logo {
     width: 75px;
     object-fit: contain;
@@ -55,13 +59,22 @@
     justify-content: space-evenly;
 }
 
-.header_option {
+.text-navbar {
     text-decoration: none;
     color: white !important;
-    font-weight: 700;
+    font-weight: 700 !important;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 17px;
+    font-size: 18px !important;
+}
+
+.text-navbar-active {
+    color: #F74D4D !important;
+    text-decoration: none;
+    font-weight: 700 !important;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px !important;
 }
 
 .price {

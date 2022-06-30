@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
+import { UserContext } from '../../Context/User-Context'
 import '../Styles.css'
 
 export default function Register() {
@@ -6,6 +7,7 @@ export default function Register() {
     const title = 'Register'
     document.title = 'DumbMerch | ' + title
 
+    const [state, dispatch] = useContext(UserContext)
     const [form, setForm] = useState({
         name: '',
         email: '',
@@ -23,6 +25,14 @@ export default function Register() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        const body = JSON.stringify(form)
+
+        dispatch({
+            type: 'USER_SUCCESS',
+            payload: body
+        })
+        
     }
 
     return (

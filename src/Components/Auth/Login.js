@@ -1,10 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { UserContext } from '../../Context/User-Context'
 import '../Styles.css'
 
 export default function Login() {
 
     const title = 'Login'
     document.title = 'DumbMerch | ' + title
+
+    const [state, dispatch] = useContext(UserContext)
+
+    const navigate = useNavigate()
 
     const [form, setForm] = useState({
         email: '',
@@ -20,10 +26,29 @@ export default function Login() {
         })
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+
+        const body = JSON.stringify(form)
+
+        localStorage.getItem('body', body)
+
+        dispatch({
+            type: 'LOGIN_SUCCESS',
+            payload: body
+        })
+
+        if (email === 'diah@gmail.com') {
+            navigate('/homepage')
+        } else {
+            navigate('/profile')
+        }
+    }
+
     return (
         <div className='modal_form'>
             <h3 className=' mb-4 fw-bold'>Login</h3>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className='form-group mb-3'>
                     <input
                         className='form-control' 
@@ -49,7 +74,7 @@ export default function Login() {
                     />
                 </div>
                 <div className='d-grid'>
-                    <button type='submit'
+                    <button 
                         style={{backgroundColor: '#F74D4D', color:'white'}} 
                         className='button mt-3 fw-bold'>
                             Login 

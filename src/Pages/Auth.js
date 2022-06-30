@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-import './Styles.css'
 
 import Frame from '../Assets/Frame.png'
 import Login from '../Components/Auth/Login'

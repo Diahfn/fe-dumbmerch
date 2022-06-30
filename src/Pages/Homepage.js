@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import ProductCard from '../Components/Card/Product-Card'
 import NavBar from '../Components/NavBar'
-import { dataProduct } from '../Dummy/DataProduct'
-import './Styles.css'
+import { dataProduct } from '../Dummy/Product'
 
 export default function Homepage() {
 

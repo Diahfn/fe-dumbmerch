@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import NavBar from '../Components/NavBar'
 import { useParams } from  'react-router-dom'
-import { dataProduct } from '../Dummy/DataProduct'
+import { dataProduct } from '../Dummy/Product'
 import convertRupiah from 'rupiah-format'
-import './Styles.css'
 
 export default function DetailPage() {
 
     let { id } = useParams()
+
+    const title = 'Product'
+    document.title = 'DumbMerch | ' + title
 
     const [product, setProduct] = useState({})
 
@@ -19,9 +21,9 @@ export default function DetailPage() {
 
   return (
     <div className='bg'>
-        <NavBar />
+        <NavBar title={title} />
         <div className='d-flex justify-content-center'>
-            <div className='mt-5 d-flex'>
+            <div className='my-5 d-flex'>
                 <div className='mx-5'>
                     <img src={product?.image} className='image_product' />
                 </div>
