@@ -1,6 +1,8 @@
 import React from 'react'
 import '../Styles.css'
 
+import admin from '../../Assets/admin.png'
+
 export default function Contact({ dataContact, setContact, contact }) {
 
     const clickContact = (id) => {
@@ -11,12 +13,12 @@ export default function Contact({ dataContact, setContact, contact }) {
 
     return (
         <>
-            {dataContact.map(item => (
-                <div 
+            {dataContact.map((item, index) => (
+                <div key={index}
                     className={`contact mt-3 px-2 ${contact?.id == item?.id} $$ contact-active`} 
                     onClick={() => clickContact(item.id)}
                 >
-                    <img src={item.img} className='me-2' />
+                    <img src={admin} className='me-2 img_contact' />
                     <div className='pt-2'>
                         <ul className='ps-0 text-contact'>
                             <li>{item.name}</li>

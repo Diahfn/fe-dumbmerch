@@ -3,12 +3,20 @@ import ProductCard from '../Components/Card/Product-Card'
 import NavBar from '../Components/NavBar'
 import { dataProduct } from '../Dummy/Product'
 
-export default function Homepage() {
+export default function Homepage(props) {
 
     const title = 'Product'
     document.title = 'DumbMerch | ' + title
 
     const [product, setProduct] = useState(dataProduct)
+    
+    // const filterdata = dataProduct.filter((el) => {
+    //     if (props.input === '') {
+    //         return el
+    //     } else {
+    //         return el.text.toLowerCase().includes(props.input)
+    //     }
+    // })
 
   return (
     <div className='bg'>

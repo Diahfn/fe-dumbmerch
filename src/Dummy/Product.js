@@ -55,5 +55,21 @@ export const dataProduct = [
         stock: 30,
         image: 'https://novelsummary.com/wp-content/uploads/2021/06/Essay-On-Hamlets-Attitude-Towards-Claudius.jpg',
         desc: 'Mouse Wireless Alytech AL - Y5D, hadir dengan desain 3 tombol mouse yang ringan dan mudah dibawa. Mouse ini menggunakan frekuensi radio 2.4GHz (bekerja hingga jarak 10m) dan fitur sensor canggih optik pelacakan dengan penerima USB yang kecil. '
+    }, 
+    {
+        id: 8,
+        name: 'Pillow',
+        price: 100000,
+        stock: 90,
+        image: 'https://www.fatboy.com/assets/image/000/007/680/FATBOY_King-Pillow-Outdoor_Stripe-Blue-Ocean_Packshot_104571.jpg',
+        desc: 'Mouse Wireless Alytech AL - Y5D, hadir dengan desain 3 tombol mouse yang ringan dan mudah dibawa. Mouse ini menggunakan frekuensi radio 2.4GHz (bekerja hingga jarak 10m) dan fitur sensor canggih optik pelacakan dengan penerima USB yang kecil. '
+    },
+    {
+        id: 9,
+        name: 'Stationary Package',
+        price: 100000,
+        stock: 90,
+        image: 'https://media.takealot.com/covers_images/c0d2740884b94f69bc1012b462fe9922/s-pdpxl.file',
+        desc: 'Mouse Wireless Alytech AL - Y5D, hadir dengan desain 3 tombol mouse yang ringan dan mudah dibawa. Mouse ini menggunakan frekuensi radio 2.4GHz (bekerja hingga jarak 10m) dan fitur sensor canggih optik pelacakan dengan penerima USB yang kecil. '
     }
 ]

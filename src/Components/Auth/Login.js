@@ -31,18 +31,24 @@ export default function Login() {
 
         const body = JSON.stringify(form)
 
-        localStorage.getItem('body', body)
-
-        dispatch({
-            type: 'LOGIN_SUCCESS',
-            payload: body
-        })
-
+        // localStorage.getItem('body', body)
+        
+        // Checking email user
         if (email === 'diah@gmail.com') {
+
+            // Send data to usecontext
+            dispatch({
+                type: 'LOGIN_SUCCESS',
+                payload: body
+            })
+
             navigate('/homepage')
         } else {
-            navigate('/profile')
+            navigate('/category')
         }
+
+        
+
     }
 
     return (

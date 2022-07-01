@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom'
+import Category from './Admin/Category';
 import PrivateRoute from './Components/Private-Route/Private-Route';
 import { UserContext } from './Context/User-Context';
 
@@ -15,18 +16,11 @@ function App() {
 
   const navigate = useNavigate()
 
-  // Check if user login or not
-  const checkAuth = () => {
+  useEffect(() => {
     if (state.isLogin === false) {
       navigate('/')
-    } 
-  }
-
-  useEffect(() => {
-      checkAuth()
-  }, [])
-
-  // console.log(state)
+    }
+  }, [state])
 
   return (
     <Routes>
@@ -36,6 +30,7 @@ function App() {
         <Route path='/product/:id' element={<DetailPage />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/user-complain' element={<UserComplain />} />
+        <Route path='/category' element={<Category />} />
       </Route>
     </Routes>
   );

@@ -1,6 +1,11 @@
 * {
   padding: 0%;
   margin: 0%;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -67,11 +72,31 @@ img {
 
 .img-transaction {
   width: 85px;
-  height: 100px;
+  height: 90px;
+  border-radius: 2px;
 }
 
 .transaction-card {
-  width: 550px;
+  width: 540px;
   background-color: #303030;
   padding: 12px;
+  border-radius: 3px;
 }
+
+/* Style for admin page */
+
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+  padding: 13px;
+  width: 350px;
+  border-bottom: 1px solid #C4C4C4;
+}
+
+.table > tbody > tr > td {
+  font-weight: 300;
+}
+

@@ -11,7 +11,7 @@ export default function ProductCard ({ item, index }) {
                 key={index}
             >
                 <div>
-                    <img src={item.image} className='rounded' style={{width: '197px', height: '245px'}}/>
+                    <img src={item.image} className='rounded' style={{width: '197px', height: '240px'}}/>
                     <div className='mx-2 my-2'>
                         <div style={{color: '#F74D4D'}} className='text-break fw-bold'>{item.name}</div>
                         <div className='price mt-2'>

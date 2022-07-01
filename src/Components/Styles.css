@@ -40,18 +40,21 @@
 }
 
 .header_searchInput {
-    height: 30px;
+    height: 35px;
     padding: 10px;
     border: none;
     width: 250px;
-    border-radius: 5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
     font-size: 15px;
 }
 
 .header_searchIcon {
-    width: 35px;
-    margin-left: 8px;
     cursor: pointer;
+    background:  #f1faee;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    color: #555b6e;
 }
 
 .header_nav {
@@ -86,4 +89,109 @@
 .product_image {
     width: 190px;
     height: 240px;
+}
+
+.chat_img {
+    width: 50px;
+    height: 50px;
+}
+
+.text-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 79vh;
+    width: 900px;
+}
+
+.input-message {
+    width: 100%;
+    height: 40px;
+    background: rgba(171, 171, 171, 0.15);
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.contact img {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+  
+.contact ul {
+    list-style-type: none;
+}
+  
+.contact:hover {
+    background-color: #212121;
+    transition: 0.5s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.contact:active {
+    background-color: #3d3d3d;
+    transition: 0.3s;
+}
+  
+.contact-active {
+    background-color: #212121;
+    border-radius: 5px;
+}
+
+.chat-box {
+    display: flex;
+    align-items: flex-end;
+}
+
+.text-contact {
+    font-size: 14px;
+}
+  
+.text-contact-chat {
+    color: #ababab;
+}
+
+.img_contact {
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain !important;
+    border-radius: 50%;
+}
+
+.chat-other {
+    background: #575757;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 400px;
+}
+
+.text-chat {
+    background: #262626;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 400px;
+}
+
+.message-complain {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.button {
+    width: 120px;
+    border: none !important;
 }
