@@ -30,11 +30,9 @@ export default function Login() {
         e.preventDefault()
 
         const body = JSON.stringify(form)
-
-        // localStorage.getItem('body', body)
         
         // Checking email user
-        if (email === 'diah@gmail.com') {
+        if (email === 'admin@gmail.com') {
 
             // Send data to usecontext
             dispatch({
@@ -42,9 +40,9 @@ export default function Login() {
                 payload: body
             })
 
-            navigate('/homepage')
+            navigate('/admin-complain')
         } else {
-            navigate('/category')
+            navigate('/homepage')
         }
 
         
@@ -79,9 +77,9 @@ export default function Login() {
                         autoComplete='off'                                        
                     />
                 </div>
-                <div className='d-grid'>
+                <div>
                     <button 
-                        style={{backgroundColor: '#F74D4D', color:'white'}} 
+                        style={{backgroundColor: '#F74D4D',width: '100%', color:'white'}} 
                         className='button mt-3 fw-bold'>
                             Login 
                     </button>

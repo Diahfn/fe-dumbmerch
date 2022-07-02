@@ -77,7 +77,7 @@ export default function Register() {
                 </div>
                 <div className='d-grid'>
                     <button type='submit'
-                        style={{backgroundColor: '#F74D4D', color:'white'}} 
+                        style={{backgroundColor: '#F74D4D',width: '100%', color:'white'}} 
                         className='button mt-3 fw-bold'>
                             Register
                     </button>

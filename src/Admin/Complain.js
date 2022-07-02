@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Chat from '../Components/Complain/Chat'
 import Contact from '../Components/Complain/Contact'
-import NavBar from '../Components/NavBar'
+import NavbarAdmin from '../Components/Navbar-Admin'
+
+import beach from '../Assets/beach.png'
 
 export default function AdminComplain() {
 
@@ -13,27 +15,27 @@ export default function AdminComplain() {
     const dataContact = [
         {
             id: 1,
-            name: 'Admin',
-            chat: 'Yes, Is there anything I can help',
+            name: 'Ego_lol',
+            chat: 'Hello Admin, I need Your Help',
             image: 'https://cdn.albumoftheyear.org/artists/james-arthur_1551737691.jpg'
         },
         {
             id: 2,
-            name: 'Admin 2',
-            chat: 'Hello World',
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-MNRCVQWgg52OEWyWsuKTmPdyjjSsb84_xQ&usqp=CAU'
+            name: 'beach_lover',
+            chat: 'Hello Admi, This Problem Product to Me',
+            image: {beach}
         }
     ]
 
     return (
         <div className='bg'>
-            <NavBar title={title} />
+            <NavbarAdmin title={title} />
             <div className='mx-3 mt-3' style={{height: '84vh'}}>
                 <div className='d-flex'>
                     <div style={{height: '84vh'}} className="px-3 border-end border-dark overflow-auto">
                         <Contact dataContact={dataContact} setContact={setContact} contact={contact} />
                     </div>
-                    <div style={{maxHeight: '84vh'}}>
+                    <div style={{maxHeight: '84vh', flex: 1}}>
                         <Chat contact={contact} />
                     </div>
                 </div>

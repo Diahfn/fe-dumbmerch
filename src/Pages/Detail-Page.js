@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import NavBar from '../Components/NavBar'
-import { useParams } from  'react-router-dom'
+import { useNavigate, useParams } from  'react-router-dom'
 import { dataProduct } from '../Dummy/Product'
 import convertRupiah from 'rupiah-format'
 
@@ -17,6 +17,12 @@ export default function DetailPage() {
         let data = dataProduct.find((item) => item.id == id)
         setProduct(data)
     }, [id])
+
+    const navigate = useNavigate()
+
+    const buyProduct = () => {
+        navigate('/profile')
+    }
     
 
   return (
@@ -40,7 +46,7 @@ export default function DetailPage() {
                             <h5 style={{fontWeight: '700'}}>{convertRupiah.convert(product?.price)}</h5>
                         </div>
                         <div className='d-grid mt-3'>
-                            <button
+                            <button onClick={buyProduct}
                                 style={{backgroundColor: '#F74D4D', color: 'white', fontSize: '16px'}} className='btn fw-bold'>
                                 Buy
                             </button>

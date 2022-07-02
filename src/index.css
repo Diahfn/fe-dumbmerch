@@ -91,8 +91,7 @@ img {
 .table > tfoot > tr > th,
 .table > thead > tr > td,
 .table > thead > tr > th {
-  padding: 13px;
-  width: 350px;
+  padding: 15px 20px;
   border-bottom: 1px solid #C4C4C4;
 }
 
@@ -100,3 +99,70 @@ img {
   font-weight: 300;
 }
 
+.mytable > tbody > tr > td,
+.mytable > tbody > tr > th,
+.mytable > tfoot > tr > td,
+.mytable > tfoot > tr > th,
+.mytable > thead > tr > td,
+.mytable > thead > tr > th {
+  padding: 20px;
+  width: 350px;
+}
+
+textarea {
+  background-color: #303030;
+  border: 1px solid #BCBCBC;
+  resize: none;
+  height: 110px;
+  border-radius: 5px;
+  padding: 8px 15px;
+  color: #FFFFFF;
+}
+::placeholder {
+  color: #FFFFFF;
+}
+
+:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+.add-product {
+  background-color: #303030;
+  border-radius: 5px;
+  padding: 8px 15px;
+  color: #FFFFFF;
+  border: 1px solid #BCBCBC;
+  margin: 5px 0 5px 0;
+}
+
+.upload-file {
+  background-color: #F74D4D;
+  padding: 7px 20px;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.input-category {
+  background-color: #303030;
+  border: 1px solid #BCBCBC;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 15px;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+}
+
+.card-category {
+  background-color: #303030;
+  border-radius: 5px;
+  border: 1px solid #BCBCBC;
+}
+
+.btn-category {
+  background-color: #56C05A;
+  width: 100%;
+  height: 43px;
+  border-radius: 7px;
+  color: #FFFFFF;
+  font-weight: 700;
+}

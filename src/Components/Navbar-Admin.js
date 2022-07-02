@@ -6,7 +6,7 @@ import './Styles.css'
 import Frame from '../Assets/Frame.png'
 import { UserContext } from '../Context/User-Context'
 
-export default function NavbarAdmin({props}) {
+export default function NavbarAdmin(props) {
 
   const [state, dispatch] = useContext(UserContext)
 
@@ -23,14 +23,14 @@ export default function NavbarAdmin({props}) {
 
   return (
     <div className='header'>
-      <Link to='/'>
+      <Link to='/admin-complain'>
         <img src={Frame} alt='logo' className='header_logo' />
       </Link>
 
       <div className='header_nav'>
-        <Link to='/' className={props?.title === 'Complain' ? `text-navbar-active` : `text-navbar`}>Complain</Link>
+        <Link to='/admin-complain' className={props?.title === 'Admin Complain' ? `text-navbar-active` : `text-navbar`}>Complain</Link>
         <Link to='/category' className={props?.title === 'Category' ? `text-navbar-active` : `text-navbar`}>Category</Link>
-        <Link to='/' className={props?.title === 'Profile' ? `text-navbar-active` : `text-navbar`}>Product</Link>
+        <Link to='/product' className={props?.title === 'Product' ? `text-navbar-active` : `text-navbar`}>Product</Link>
         <a className='text-navbar' onClick={Logout} >Logout</a>
         </div>
     </div>

@@ -44,48 +44,51 @@ export default function Category() {
   return (
     <div className='bg'>
         <NavbarAdmin title={title} />
-        <div className='align-self-start mx-5'>
-            <div className='d-flex align-items-start mx-5 mb-3 flex-column mt-4'>
-                <h4 className='mx-5 fw-bold'>List Category</h4>
-                <button onClick={addCategory} style={{background: '#56C05A'}} className='button mt-3 mx-5'>
-                    Add
-                </button>
-            </div>
-            <div className='d-flex justify-content-center'>
-                {category?.length != 0 ? (
-                    <table className='table mt-3 table-dark table-striped' style={{color: 'white', maxWidth: '1100px'}}>
-                        <thead>
-                            <tr style={{fontSize: '17px'}}>
-                                <th>No</th>
-                                <th>Category Name</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {category?.map((item, index) => (
-                                <tr key={index}>
-                                    <td>{index+1}</td>
-                                    <td>{item.name}</td>
-                                    <td >
-                                        <button 
-                                            className='button mx-2' onClick={()=>{handleEdit(item.id)}}
-                                            style={{background: '#56C05A'}}
-                                        >Edit</button>
-                                        <button 
-                                            onClick={() => handleDelete(item.id)} 
-                                            className='button mx-2'
-                                            style={{background: '#F74D4D'}}
-                                        >Delete</button>
-                                    </td>
+        <div className='d-flex justify-content-center mx-5'>
+            <div className='mx-5'>
+                <div className='d-flex justify-content-between mb-3 mt-5'>
+                    <h3 className='fw-bold'>List Category</h3>
+                    <button onClick={addCategory} style={{background: '#56C05A'}} className='button'>
+                        Add
+                    </button>
+                </div>
+                <div className='d-flex justify-content-center'>
+                    {category?.length != 0 ? (
+                        <table  className='table mytable my-3 table-dark table-striped' style={{color: 'white'
+                        }}>
+                            <thead>
+                                <tr style={{fontSize: '17px'}}>
+                                    <th>No</th>
+                                    <th >Category Name</th>
+                                    <th>Action</th>
                                 </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                ) : (
-                    <div>
-                        <div className='mt-3'>No Data category</div>
-                    </div>
-                )}
+                            </thead>
+                            <tbody>
+                                {category?.map((item, index) => (
+                                    <tr key={index}>
+                                        <td>{index+1}</td>
+                                        <td>{item.name}</td>
+                                        <td >
+                                            <button 
+                                                className='button mx-2' onClick={()=>{handleEdit(item.id)}}
+                                                style={{background: '#56C05A'}}
+                                            >Edit</button>
+                                            <button 
+                                                onClick={() => handleDelete(item.id)} 
+                                                className='button mx-2'
+                                                style={{background: '#F74D4D'}}
+                                            >Delete</button>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    ) : (
+                        <div>
+                            <div className='mt-3'>No Data category</div>
+                        </div>
+                    )}
+                </div>
             </div>
             <DeleteModal
                 setConfirmDelete={setConfirmDelete}
