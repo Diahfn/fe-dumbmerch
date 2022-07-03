@@ -4,7 +4,7 @@ import convertRupiah from 'rupiah-format';
 
 export default function ProductCard ({ item, index }) {
     return (
-       <div className='card mx-2 my-3' style={{backgroundColor: '#181818', width: 'auto'}}>
+       <div className='card mx-2 my-4' style={{backgroundColor: '#181818', width: 'auto'}}>
             <Link
                 to={`/product/` + item.id}
                 style={{ textDecoration: 'none' }}
